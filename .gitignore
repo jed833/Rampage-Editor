@@ -1,3 +1,4 @@
+########### C++ ############
 # Compiled Object files
 *.slo
 *.lo
@@ -19,3 +20,80 @@
 *.exe
 *.out
 *.app
+#########################
+
+######### Perl ##########
+
+/blib/
+/.build/
+_build/
+cover_db/
+inc/
+Build
+!Build/
+Build.bat
+.last_cover_stats
+/Makefile
+/Makefile.old
+/MANIFEST.bak
+/META.yml
+/META.json
+/MYMETA.*
+nytprof.out
+/pm_to_blib
+*.o
+*.bs
+
+########################
+
+########## QT ##########
+# C++ objects and libs
+
+*.slo
+*.lo
+*.o
+*.a
+*.la
+*.lai
+*.so
+*.dll
+*.dylib
+
+# # Qt-es
+
+ /.qmake.cache
+ /.qmake.stash
+ *.pro.user
+ *.pro.user.*
+ *.moc
+ moc_*.cpp
+ qrc_*.cpp
+ ui_*.h
+ Makefile*
+ *-build-*
+
+######### C #############
+Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Libraries
+*.lib
+*.a
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
