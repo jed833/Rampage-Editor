@@ -20,6 +20,7 @@
 *.exe
 *.out
 *.app
+
 #########################
 
 ######### Perl ##########
@@ -66,11 +67,12 @@ nytprof.out
  *.pro.user
  *.pro.user.*
  *.moc
- moc_*.cpp
+ moc_*
  qrc_*.cpp
  ui_*.h
  Makefile*
  *-build-*
+ rampage
 
 ######### C #############
 Object files
@@ -96,4 +98,3 @@ Object files
 *.i*86
 *.x86_64
 *.hex
-
