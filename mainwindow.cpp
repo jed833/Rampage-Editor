@@ -6,6 +6,7 @@ MainWindow::MainWindow()
 {
     createActions();
     createMenus();
+    createStatusBar();
 
     setWindowTitle(tr("Rampage"));
 }
@@ -138,4 +139,10 @@ void MainWindow::createMenus()
     editMenu->addAction(pasteAction);
 
     viewMenu = menuBar()->addMenu(tr("&View"));
+}
+
+void MainWindow::createStatusBar()
+{
+    readyLabel = new QLabel(tr(" Ready"));
+    statusBar()->addWidget(readyLabel, 1);
 }

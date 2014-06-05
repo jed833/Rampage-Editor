@@ -41,6 +41,7 @@ class MainWindow : public QMainWindow
     private:
         void createActions();
         void createMenus();
+        void createStatusBar();
 
         QLabel *readyLabel;
 
