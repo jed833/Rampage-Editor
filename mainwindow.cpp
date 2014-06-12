@@ -1,9 +1,13 @@
 #include <QtWidgets>
 
 #include "mainwindow.h"
+#include "editorblade.h"
+#include "browserblade.h"
 
 MainWindow::MainWindow()
 {
+    editorblade = new EditorBlade;
+    setCentralWidget(editorblade);
     createActions();
     createMenus();
     createStatusBar();
