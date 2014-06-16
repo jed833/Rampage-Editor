@@ -18,6 +18,9 @@ class EditorBlade : public QFrame
 	    EditorBlade(QWidget *parent = 0);
 	    void addEditor();
 	    void addEditor(QString text);
+	    void cut();
+	    void copy();
+	    void paste();
 
 	private:
 		QTabWidget *tabWidget;

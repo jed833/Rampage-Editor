@@ -37,3 +37,27 @@ void EditorBlade::addEditor(QString text)
 {
     tabWidget->addTab(new QTextEdit(text), tr("file.h"));
 }
+
+void EditorBlade::cut()
+{
+    QTextEdit* temp = NULL;
+    QWidget* widget = tabWidget->currentWidget(); // for the second tab
+    temp = (QTextEdit*)widget;
+    temp->cut();
+}
+
+void EditorBlade::copy()
+{
+    QTextEdit* temp = NULL;
+    QWidget* widget = tabWidget->currentWidget(); // for the second tab
+    temp = (QTextEdit*)widget;
+    temp->copy();
+}
+
+void EditorBlade::paste()
+{
+    QTextEdit* temp = NULL;
+    QWidget* widget = tabWidget->currentWidget(); // for the second tab
+    temp = (QTextEdit*)widget;
+    temp->paste();
+}

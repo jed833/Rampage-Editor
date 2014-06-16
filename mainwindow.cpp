@@ -61,7 +61,7 @@ void MainWindow::cut()
 
 void MainWindow::copy()
 {
-
+    editorblade->copy();
 }
 
 void MainWindow::paste()
