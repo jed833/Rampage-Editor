@@ -10,7 +10,8 @@ class QLabel;
 class QMdiArea;
 class QMenu;
 class QToolBar;
-class Editor;
+class EditorBlade;
+class BrowserBlade;
 QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow
@@ -44,6 +45,8 @@ class MainWindow : public QMainWindow
         void createStatusBar();
 
         QLabel *readyLabel;
+        EditorBlade *editorblade;
+        BrowserBlade *browserblade;
 
         QMenu *fileMenu;
         QMenu *editMenu;

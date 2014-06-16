@@ -6,7 +6,7 @@ INCLUDEPATH += .
 QT += widgets
 
 # Input
-HEADERS += mainwindow.h
+HEADERS += mainwindow.h editorblade.h
 FORMS +=
-SOURCES += main.cpp mainwindow.cpp
+SOURCES += main.cpp mainwindow.cpp editorblade.cpp
 RESOURCES +=
