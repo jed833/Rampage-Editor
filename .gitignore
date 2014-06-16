@@ -62,17 +62,17 @@ nytprof.out
 
 # # Qt-es
 
- /.qmake.cache
- /.qmake.stash
- *.pro.user
- *.pro.user.*
- *.moc
- moc_*
- qrc_*.cpp
- ui_*.h
- Makefile
- *-build-*
- rampage
+/.qmake.cache
+/.qmake.stash
+*.pro.user
+*.pro.user.*
+*.moc
+moc_*
+qrc_*.cpp
+ui_*.h
+Makefile
+*-build-*
+rampage
 
 ######### C #############
 Object files
