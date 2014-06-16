@@ -16,7 +16,7 @@ MainWindow::MainWindow()
 
 void MainWindow::newFile()
 {
-
+    editorblade->addEditor();
 }
 
 void MainWindow::closeEvent(QCloseEvent *event)
