@@ -11,7 +11,6 @@ before_install:
     - cd cmake-2.8.11
     - ./bootstrap --prefix=/user --system-libs --mandir=/share/man --docdir=/share/doc/cmake-2.8.11
     - make
-    - make test
     - sudo make install
 
 install: 
