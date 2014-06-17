@@ -73,6 +73,9 @@ ui_*.h
 Makefile
 *-build-*
 rampage
+build
+
+
 
 ######### C #############
 Object files

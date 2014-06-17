@@ -8,9 +8,10 @@ before_install:
 
 install: 
     - sudo apt-get update
-    - sudo apt-get install qtdeclarative5-dev qt5-default
+    - sudo apt-get install qtdeclarative5-dev qt5-default cmake python
 
 script:
-    - qmake -o Makefile rampage.pro
+    - mkdir build
+    - cd build
+    - cmake ..
     - make
-    - make clean
