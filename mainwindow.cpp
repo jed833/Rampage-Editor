@@ -16,7 +16,7 @@ MainWindow::MainWindow()
 
 void MainWindow::newFile()
 {
-    editorblade->addEditor();
+    editorblade->newFile();
 }
 
 void MainWindow::closeEvent(QCloseEvent *event)
@@ -26,7 +26,7 @@ void MainWindow::closeEvent(QCloseEvent *event)
 
 void MainWindow::openFile()
 {
-    
+    editorblade->openFile();
 }
 
 void MainWindow::openFolder()
@@ -36,12 +36,12 @@ void MainWindow::openFolder()
 
 void MainWindow::save()
 {
-
+    editorblade->save();
 }
 
 void MainWindow::saveAs()
 {
-
+    editorblade->saveAs();
 }
 
 void MainWindow::saveAll()
@@ -76,12 +76,12 @@ void MainWindow::createActions()
     newFileAction->setStatusTip(tr("Create a new file"));
     connect(newFileAction, SIGNAL(triggered()), this, SLOT(newFile()));
 
-    openFileAction = new QAction(tr("&Open..."), this);
+    openFileAction = new QAction(tr("&Open File"), this);
     openFileAction->setShortcut(QKeySequence::Open);
     openFileAction->setStatusTip(tr("Open an existing file"));
     connect(openFileAction, SIGNAL(triggered()), this, SLOT(openFile()));
 
-    openFolderAction = new QAction(tr("&Open..."), this);
+    openFolderAction = new QAction(tr("&Open Folder"), this);
     openFolderAction->setStatusTip(tr("Open an existing folder"));
     connect(openFolderAction, SIGNAL(triggered()), this, SLOT(openFolder()));
 

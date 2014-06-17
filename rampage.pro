@@ -2,6 +2,7 @@ TEMPLATE = app
 TARGET = rampage
 DEPENDPATH += .
 INCLUDEPATH += .
+CONFIG += console
 
 QT += widgets
 

@@ -9,6 +9,7 @@
 #include <QLabel>
 #include <QFile>
 #include <QPropertyAnimation>
+#include <QFileDialog>
 
 class EditorBlade : public QFrame
 {
@@ -16,8 +17,15 @@ class EditorBlade : public QFrame
 
 	public:
 	    EditorBlade(QWidget *parent = 0);
-	    void addEditor();
-	    void addEditor(QString text);
+
+	    void newFile();
+	    void openFile();
+
+	    void save();
+	    void saveFile();
+	    void saveAs();
+	    void saveAll();
+
 	    void cut();
 	    void copy();
 	    void paste();
