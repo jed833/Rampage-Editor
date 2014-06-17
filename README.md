@@ -13,8 +13,9 @@ Ubuntu
 
 Arch
 ### Compile Code
-- run qmake ```qmake -o Makefile rampage.pro```
-- run make ```make```
+- create build dir ``` mkdir build ```
+- move to build ``` cd build ```
+- run cmake ```cmake .. & make```
 
 ### Run the Code
 ```
