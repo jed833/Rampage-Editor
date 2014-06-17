@@ -20,4 +20,6 @@ install:
 script:
     - mkdir build
     - cd build
-    - cmake .. & make
+    - cmake ..
+    - cd build
+    - make
