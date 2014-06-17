@@ -1,7 +1,6 @@
 #include <QtWidgets>
 
 #include "editorblade.h"
-#include "editortab.h"
 
 EditorBlade::EditorBlade(QWidget *parent): QFrame(parent)
 {
@@ -11,7 +10,7 @@ EditorBlade::EditorBlade(QWidget *parent): QFrame(parent)
     mainLayout->addWidget(tabWidget);
     setLayout(mainLayout);
 
-    addEditor();
+    newFile();
 
     QFile foo("/home/guser/Developer/Rampage-Editor/in.txt");
     foo.open(QIODevice::ReadOnly | QIODevice::Text);
@@ -25,17 +24,83 @@ EditorBlade::EditorBlade(QWidget *parent): QFrame(parent)
         text = text + line + "\n";
     }
 
-    addEditor(text);
+    openFile();
 }
 
-void EditorBlade::addEditor()
+void EditorBlade::newFile()
 {
-    tabWidget->addTab(new QTextEdit(), tr("file.h"));
+    tabWidget->addTab(new QTextEdit(), tr("untitled"));
 }
 
-void EditorBlade::addEditor(QString text)
+void EditorBlade::openFile()
 {
-    tabWidget->addTab(new QTextEdit(text), tr("file.h"));
+    QString fileName = QFileDialog::getOpenFileName(this, tr("Open"), ".");
+
+    if (fileName.isEmpty())
+    {
+        return;
+    }
+    else
+    {
+        // read file into string
+    }
+
+    // replace fileName with string from above
+    tabWidget->addTab(new QTextEdit(fileName), fileName);
+
+    QTextEdit* temp = NULL;
+    QWidget* widget = tabWidget->widget(tabWidget->count() -1);
+    temp = (QTextEdit*)widget;
+    temp->setDocumentTitle(fileName);
+}
+
+void EditorBlade::save()
+{
+    QTextEdit* temp = NULL;
+    QWidget* widget = tabWidget->currentWidget(); // for the second tab
+    temp = (QTextEdit*)widget;
+
+    if (temp->documentTitle() == "")
+    {
+        printf("untitled\n");
+        saveAs();
+    }
+    else
+    {
+        printf("titled\n");
+        saveFile();
+    }
+}
+
+void EditorBlade::saveFile()
+{
+    QTextEdit* temp = NULL;
+    QWidget* widget = tabWidget->currentWidget(); // for the second tab
+    temp = (QTextEdit*)widget;
+    
+}
+
+void EditorBlade::saveAs()
+{
+    QTextEdit* temp = NULL;
+    QWidget* widget = tabWidget->currentWidget(); // for the second tab
+    temp = (QTextEdit*)widget;
+
+    QString fileName = QFileDialog::getOpenFileName(this, tr("Open"), ".");
+
+    if (fileName.isEmpty())
+    {
+        return;
+    }
+    else
+    {
+        // write editor to file
+    }
+}
+
+void EditorBlade::saveAll()
+{
+    
 }
 
 void EditorBlade::cut()
