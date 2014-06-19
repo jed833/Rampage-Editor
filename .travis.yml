@@ -13,7 +13,7 @@ before_install:
     - make
     - sudo make install
     - cd ..
-    - rm -R cmake-2.8.11
+    - sudo rm -R cmake-2.8.11
 
 install: 
     - sudo apt-get update
