@@ -5,20 +5,21 @@ compiler:
 before_install:
     - sudo apt-get update
     - sudo apt-add-repository ppa:ubuntu-sdk-team/ppa -y
-    - sudo apt-get install tar libarchive-dev
-    - sudo apt-get remove cmake
-    - wget http://www.cmake.org/files/v2.8/cmake-2.8.11.tar.gz
-    - tar -xzvf cmake-2.8.11.tar.gz
-    - cd cmake-2.8.11
-    - ./bootstrap --prefix=/user --system-libs --mandir=/share/man --docdir=/share/doc/cmake-2.8.11
-    - make
-    - sudo make install 
+    - sudo apt-get install tar libarchive-dev cmake
+      #    - wget http://www.cmake.org/files/v2.8/cmake-2.8.11.tar.gz
+      #    - tar -xzvf cmake-2.8.11.tar.gz
+      #    - cd cmake-2.8.11
+      #    - ./bootstrap --prefix=/user --system-libs --mandir=/share/man --docdir=/share/doc/cmake-2.8.11
+      #    - make
+      #    - sudo make install 
 
 install: 
     - sudo apt-get update
     - sudo apt-get install qtdeclarative5-dev qt5-default python
 
 script:
+    - mkdir build
+    - cd build
     - cmake ..
     - cd build
     - make
