@@ -23,8 +23,5 @@ install:
     - sudo apt-get install qtdeclarative5-dev qt5-default python
 
 script:
-    - mkdir build
-    - cd build
     - cmake ..
-    - cd build
     - make
